@@ -1,13 +1,18 @@
-#factorial solution using recursion
+#factorial solution using while loop
 def factorial(num):
 
     if type(num) is int:
-        if num < 2 and num >= 0:
-            return 1
-        elif num < 0:
+        if num < 0:
             return None
-        else:
-            return num * factorial(num - 1)
+        else: 
+            count = num
+            fact = 1
+
+            while count >= 2:
+                fact *= count
+                count -= 1
+            
+            return fact
     else:
         return None
     
